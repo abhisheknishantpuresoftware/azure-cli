@@ -44,9 +44,9 @@ ARG JP_VERSION="0.2.1"
 
 
 RUN if [ `uname -m` = "aarch64" ] ; then \
-       export ARCH=arm64
+       export ARCH=arm64; \
     else \
-       export ARCH=amd64
+       export ARCH=amd64; \
     fi
     curl -L https://github.com/jmespath/jp/releases/download/${JP_VERSION}/jp-linux-$ARCH -o /usr/local/bin/jp && \
     chmod +x /usr/local/bin/jp 
